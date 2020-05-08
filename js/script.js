@@ -1,6 +1,6 @@
 	//Get the elements
  var textfield = document.getElementById("textfield");
- var result = document.getElementById("tasks-to-do");
+ var taskToDo = document.getElementById("tasks-to-do");
  var btnCreate = document.querySelector("btn-create");
 
 function createTask() {
@@ -40,7 +40,7 @@ function createTask() {
   	
 
  		//Put the paragraph inside the div element
-  result.appendChild(paragraph);
+  taskToDo.appendChild(paragraph);
   	//Add a class with the CSS style
   paragraph.classList.add("list-item");
   	//Make the input erase after submit the info
