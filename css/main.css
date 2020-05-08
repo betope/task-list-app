@@ -80,15 +80,10 @@ body {position: relative;}
 }
 
 .btn-check:hover {color: #1df505;}
+
 .btn-delete:hover {color: #ff0505;}
-.btn-check {
-	margin-right: 30px;
-}
 
-.btn-delete {
-	
-}
-
+.btn-check {margin-right: 30px;}
 .copy {text-align: center;}
 
 .copy, a {color: #ccc;}
