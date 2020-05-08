@@ -5,7 +5,8 @@
     outline: none;
     padding: 0;
 }
-body {position: relative;}
+body {position: relative; background-color: #f0b0b0;}
+
 .app-title {
 	color: #808080;
 	margin-top: 50px;
