@@ -39,7 +39,6 @@ function createTask() {
   	//Put the icon inside the span that hold the button
   btnDelete.appendChild(deleteIcon);
 
-
  		//Put the paragraph inside the div element
   taskToDo.appendChild(paragraph);
   	//Add a class with the CSS style
@@ -49,6 +48,7 @@ function createTask() {
   	//Make the focus go back to the input after submit the info
   textfield.focus();
 
+  }
 
   	//Function to to mark the task as done
   function doneTask() {
