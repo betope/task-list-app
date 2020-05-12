@@ -2,7 +2,7 @@
  var textfield = document.getElementById("textfield");
  var taskToDo = document.getElementById("tasks-to-do");
  var btnCreate = document.querySelector("btn-create");
- var doneTasks = document.querySelector("done-tasks");
+ var doneTasks = document.getElementById("done-tasks");
 
 function createTask() {
   //Verify if the input isn't empty to create a task
@@ -18,7 +18,7 @@ function createTask() {
   var btnCheck = document.createElement("span");
   btnCheck.classList.add("btn-check");
   	// Put the span inside the paragraph
-  paragraph.appendChild(btnCheck); 
+  paragraph.appendChild(btnCheck);
   	//Create a i element to show the icon
   var checkIcon = document.createElement("i");
   	//Add the CSS class that show the icon
@@ -38,7 +38,7 @@ function createTask() {
   deleteIcon.classList.add("fas", "fa-trash");
   	//Put the icon inside the span that hold the button
   btnDelete.appendChild(deleteIcon);
-  	
+
 
  		//Put the paragraph inside the div element
   taskToDo.appendChild(paragraph);
@@ -49,8 +49,6 @@ function createTask() {
   	//Make the focus go back to the input after submit the info
   textfield.focus();
 
-  console.log(textfield.length);
-  }
 
   	//Function to to mark the task as done
   function doneTask() {
@@ -61,18 +59,11 @@ function createTask() {
   	// Function to delete a task
   function deleteTask() {
 		paragraph.classList.add("task-deleted");
-}	
-
-	
- 
-btnCheck.addEventListener("click", doneTask);
-btnDelete.addEventListener("click", deleteTask);
-
 }
 
 
 
+btnCheck.addEventListener("click", doneTask);
+btnDelete.addEventListener("click", deleteTask);
 
-
-
-
+}

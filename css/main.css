@@ -17,7 +17,7 @@ body {position: relative;}
 	padding: 50px 20px;
 }
 .navbar {
-	display: flex; 
+	display: flex;
 	justify-content: space-between;
 	margin: auto auto 50px;
 	max-width: 700px;
@@ -46,13 +46,13 @@ body {position: relative;}
 	color: #fff;
 }
 
-#tasks-to-do {
+#tasks-to-do,
+#done-tasks {
 	display: flex;
 	flex-direction: column;
 	margin: auto;
 	max-width: 600px;
 }
-
 .list-item {
 	border: 1px solid #545453;
 	border-radius: 5px;
