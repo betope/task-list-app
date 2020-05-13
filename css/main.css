@@ -88,3 +88,9 @@ body {position: relative;}
 .copy {text-align: center;}
 
 .copy, a {color: #ccc;}
+
+/* Dark Mode */
+.dark-mode {
+  background: #515151;
+  color: #fff;
+}
