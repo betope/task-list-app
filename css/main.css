@@ -66,6 +66,7 @@ body {position: relative;}
 .task-done {
 	border: 1px solid #ff0318;
 	color: #ff0318;
+  order: 500;
 	opacity: .5;
 	text-decoration: line-through;
 }

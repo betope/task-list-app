@@ -53,7 +53,6 @@ function createTask() {
   	//Function to to mark the task as done
   function doneTask() {
     paragraph.classList.toggle("task-done");
-    doneTasks.appendChild(paragraph);
   }
 
   	// Function to delete a task
