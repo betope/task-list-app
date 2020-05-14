@@ -1,5 +1,6 @@
 	//Get the elements
  var textfield = document.getElementById("textfield");
+ var enterButton = document.getElementById("enter-btn");
  var taskToDo = document.getElementById("tasks-to-do");
  var btnCreate = document.querySelector("btn-create");
 
@@ -49,19 +50,23 @@ function createTask() {
 
   }
 
-  	//Function to to mark the task as done
+  //Function to to mark the task as done
   function doneTask() {
-    paragraph.classList.toggle("task-done");
+  paragraph.classList.toggle("task-done");
   }
 
-  	// Function to delete a task
+  // Function to delete a task
   function deleteTask() {
-		paragraph.classList.add("task-deleted");
+  paragraph.classList.add("task-deleted");
+  }
+
+  btnCheck.addEventListener("click", doneTask);
+  btnDelete.addEventListener("click", deleteTask);
 }
 
-
-
-btnCheck.addEventListener("click", doneTask);
-btnDelete.addEventListener("click", deleteTask);
-
+function detectEnterPress(e) {
+  if(textfield.value.length > 0 && e.keyCode == 13) {
+    createTask();
+  }
 }
+window.addEventListener("keypress", detectEnterPress);
