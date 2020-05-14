@@ -2,7 +2,6 @@
  var textfield = document.getElementById("textfield");
  var taskToDo = document.getElementById("tasks-to-do");
  var btnCreate = document.querySelector("btn-create");
- var doneTasks = document.getElementById("done-tasks");
 
 function createTask() {
   //Verify if the input isn't empty to create a task
