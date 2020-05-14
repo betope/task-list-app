@@ -7,7 +7,7 @@
 function createTask() {
   //Verify if the input isn't empty to create a task
   if(textfield.value.length == 0) {
-  	alert("Por favor digite algum texto!");
+  	alert("Por favor, digite algum texto antes de criar uma tarefa!");
   } else {
   	//Create a p element
   var paragraph = document.createElement("p");
@@ -67,6 +67,8 @@ function createTask() {
 function detectEnterPress(e) {
   if(textfield.value.length > 0 && e.keyCode == 13) {
     createTask();
+  } else {
+    alert("Por favor, digite algum texto antes de criar uma tarefa!");
   }
 }
 window.addEventListener("keypress", detectEnterPress);
