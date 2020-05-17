@@ -4,6 +4,7 @@
  var taskToDo = document.getElementById("tasks-to-do");
  var btnCreate = document.querySelector("btn-create");
 
+// Function that create the task elements
 function createTask() {
   //Verify if the input isn't empty to create a task
   if(textfield.value.length == 0) {
@@ -60,15 +61,18 @@ function createTask() {
   paragraph.classList.add("task-deleted");
   }
 
+  // Listen the check and delete button
   btnCheck.addEventListener("click", doneTask);
   btnDelete.addEventListener("click", deleteTask);
 }
 
+// Function to detect when the enter key is pressed
 function detectEnterPress(e) {
   if(textfield.value.length > 0 && e.keyCode == 13) {
     createTask();
   }
 }
+// Listen to create a taks when the enter key is pressed
 window.addEventListener("keypress", detectEnterPress);
 
 // Dark Mode

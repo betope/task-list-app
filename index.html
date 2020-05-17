@@ -12,11 +12,16 @@
 <body>
 	<header class="header">
 		<div class="menu-wrapper">
-			<h1 class="app-title">To-Do List App</h1>
-			<span class="btn-menu"><i class="fas fa-ellipsis-v"></i><i class="fas fa-bars"></i></span>
+			<h1 class="app-title">To-Do List</h1>
+			<span class="btn-menu"><i class="fas fa-bars"></i></span>
+			<div class="menu-window">
+				<p>Modo noturno <input type="checkbox"></p>
+				<p>Sobre</p>
+				<p>Versão 1.0</p>
+			</div>
 		</div>
 	</header>
-	<div class="wrapper">
+	<div class="creator-wrapper">
   	<div class="navbar"><input class="user-input" type="text" id="textfield" placeholder="Criar uma tarefa...">
   	<input id="enter-btn" class="btn-create" type="button" value="Criar" onclick="createTask()" onkeypress=""></div>
   	<div id="tasks-to-do"></div>
