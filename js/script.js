@@ -70,3 +70,9 @@ function detectEnterPress(e) {
   }
 }
 window.addEventListener("keypress", detectEnterPress);
+
+// Dark Mode
+function darkMode() {
+  var darkModeOn = document.body;
+  element.classList.toggle("dark-mode");
+}

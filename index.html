@@ -5,11 +5,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>To-Do List Online App</title>
 	<link rel="stylesheet" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 	<meta name="description" content="">
 	<meta name="author">
 </head>
 <body>
-	<h1 class="app-title">To-Do List App</h1>
+	<header class="header">
+		<div class="menu-wrapper">
+			<h1 class="app-title">To-Do List App</h1>
+			<span class="btn-menu"><i class="fas fa-ellipsis-v"></i><i class="fas fa-bars"></i></span>
+		</div>
+	</header>
 	<div class="wrapper">
   	<div class="navbar"><input class="user-input" type="text" id="textfield" placeholder="Criar uma tarefa...">
   	<input id="enter-btn" class="btn-create" type="button" value="Criar" onclick="createTask()" onkeypress=""></div>
