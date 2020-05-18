@@ -5,29 +5,29 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>To-Do List Online App</title>
 	<link rel="stylesheet" href="css/main.css">
-	<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
 	<meta name="description" content="">
 	<meta name="author">
 </head>
 <body>
 	<header class="header">
 		<div class="menu-wrapper">
-			<h1 class="app-title">To-Do List</h1>
-			<span class="btn-menu"><i class="fas fa-bars"></i></span>
+			<h1 class="app-title"><a href="index.html">To-Do List</a></h1>
 			<div class="menu-window">
 				<p>Modo noturno <input type="checkbox"></p>
 				<p>Sobre</p>
 				<p>Versão 1.0</p>
 			</div>
+			<span class="btn-menu"><i class="fas fa-bars"></i></span>
 		</div>
 	</header>
 	<div class="creator-wrapper">
-  	<div class="navbar"><input class="user-input" type="text" id="textfield" placeholder="Criar uma tarefa...">
+  	<div class="navbar"><input class="user-input" type="text" id="textfield" placeholder="Escreva o nome da tarefa...">
   	<input id="enter-btn" class="btn-create" type="button" value="Criar" onclick="createTask()" onkeypress=""></div>
   	<div id="tasks-to-do"></div>
 	</div>
-<footer>
-	<p class="copy">Created with <i class="fas fa-heart"></i> by <a href="https://betopereira.com/" target="_blank">Beto Pereira</a></p>
+<footer class="footer">
+	 <p class="copy">Created<!-- <i class="fas fa-heart"></i>--> by <a href="https://betopereira.com/" target="_blank">Beto Pereira</a></p>
 </footer>
 <script src="https://kit.fontawesome.com/4e4d645a1a.js" crossorigin="anonymous"></script>
 <script src="js/script.js"></script>

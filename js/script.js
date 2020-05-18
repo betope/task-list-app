@@ -2,7 +2,8 @@
  var textfield = document.getElementById("textfield");
  var enterButton = document.getElementById("enter-btn");
  var taskToDo = document.getElementById("tasks-to-do");
- var btnCreate = document.querySelector("btn-create");
+ var btnCreate = document.querySelector(".btn-create");
+ var btnMenu = document.querySelector(".btn-menu");
 
 // Function that create the task elements
 function createTask() {
@@ -80,3 +81,11 @@ function darkMode() {
   var darkModeOn = document.body;
   element.classList.toggle("dark-mode");
 }
+
+function showHideMenu() {
+  var menuWindow = document.querySelector(".menu-window");
+  menuWindow.classList.toggle("show-menu-window");
+}
+
+btnMenu.addEventListener("click", showHideMenu);
+// btnMenu.style.color = "red";

@@ -9,7 +9,7 @@ body {position: relative;}
 
 .header {
   border-bottom: 1px solid #ccc;
-  padding: 30px 0;
+  padding: 30px 15px;
   position: relative;
   width: 100%;
 }
@@ -21,28 +21,30 @@ body {position: relative;}
   margin: 0 auto;
   max-width: 960px;
 }
-.app-title {
+.app-title {font-weight: 700;}
 
+.app-title a {
+  text-decoration: none;
+  color: #3b3b3b;
 }
 
 .btn-menu {
+  color: #3b3b3b;
   cursor: pointer;
   font-size: 1.9rem;
 }
 
 .menu-window {
-  background: #ccc;
+  background: #f0f0f0;
   border: 1px solid #ccc;
   border-radius: 5px;
-  box-shadow: 3px 3px 1px rgba(0, 0, 0, .1);
-  /* display: none; */
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, .1);
   padding: 8px;
   position: absolute;
-  right: 320px;
-  top: 37px;
-  width: 200px;
+  right: 340px;
+  top: 36px;
+  width: 150px;
 }
-
 .menu-window p {margin-bottom: 10px;}
 
 .creator-wrapper {
@@ -126,4 +128,11 @@ body {position: relative;}
 .dark-mode {
   background: #515151;
   color: #fff;
+}
+.footer {
+  bottom: 0;
+  left: 0;
+  padding-bottom: 10px;
+  position: fixed;
+  width: 100%;
 }
