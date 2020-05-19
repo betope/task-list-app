@@ -85,9 +85,8 @@ function darkMode() {
 }
 
 function showHideMenu() {
-  var menuWindow = document.querySelector(".menu-window");
-  menuWindow.classList.toggle("show-menu-window");
+  var menuWindow = document.querySelector();
+  menuWindow.classList.toggle();
 }
 
 btnMenu.addEventListener("click", showHideMenu);
-// btnMenu.style.color = "red";
