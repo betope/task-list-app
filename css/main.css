@@ -34,18 +34,6 @@ body {position: relative;}
   font-size: 1.9rem;
 }
 
-.menu-window {
-  background: #f0f0f0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 3px 3px 7px rgba(0, 0, 0, .1);
-  padding: 8px;
-  position: absolute;
-  right: 340px;
-  top: 36px;
-  width: 150px;
-}
-.menu-window p {margin-bottom: 10px;}
 
 .creator-wrapper {
 	margin: 0 auto;
@@ -122,7 +110,8 @@ body {position: relative;}
 .btn-check {margin-right: 30px;}
 .copy {text-align: center;}
 
-.copy, a {color: #ccc;}
+.copy,
+.copy-link {color: #ccc;}
 
 /* Dark Mode */
 .dark-mode {
