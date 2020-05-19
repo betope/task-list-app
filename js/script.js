@@ -2,8 +2,10 @@
  var textfield = document.getElementById("textfield");
  var enterButton = document.getElementById("enter-btn");
  var taskToDo = document.getElementById("tasks-to-do");
- var btnCreate = document.querySelector("btn-create");
+ var btnCreate = document.querySelector(".btn-create");
+ var btnMenu = document.querySelector(".btn-menu");
 
+// Function that create the task elements
 function createTask() {
   //Verify if the input isn't empty to create a task
   if(textfield.value.length == 0) {
@@ -60,10 +62,12 @@ function createTask() {
   paragraph.classList.add("task-deleted");
   }
 
+  // Listen the check and delete button
   btnCheck.addEventListener("click", doneTask);
   btnDelete.addEventListener("click", deleteTask);
 }
 
+// Function to detect when the enter key is pressed
 function detectEnterPress(e) {
   if(textfield.value.length > 0 && e.keyCode == 13) {
     createTask();
@@ -71,4 +75,19 @@ function detectEnterPress(e) {
     alert("Por favor, digite algum texto antes de criar uma tarefa!");
   }
 }
+// Listen to create a taks when the enter key is pressed
 window.addEventListener("keypress", detectEnterPress);
+
+// Dark Mode
+function darkMode() {
+  var darkModeOn = document.body;
+  element.classList.toggle("dark-mode");
+}
+
+function showHideMenu() {
+  var menuWindow = document.querySelector(".menu-window");
+  menuWindow.classList.toggle("show-menu-window");
+}
+
+btnMenu.addEventListener("click", showHideMenu);
+// btnMenu.style.color = "red";
