@@ -48,9 +48,11 @@ body {position: relative;}
   list-style-type: none;
   margin-top: ;
   padding: 10px;
-  /* visibility: hidden; */
+  visibility: hidden;
 }
 .menu-item:not(:last-child) {margin-bottom: 10px;}
+
+.show-menu {visibility: visible;}
 
 .creator-wrapper {
 	margin: 0 auto;
