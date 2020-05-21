@@ -85,8 +85,8 @@ function darkMode() {
 }
 
 function showHideMenu() {
-  var menuWindow = document.querySelector();
-  menuWindow.classList.toggle();
+  var menuWindow = document.querySelector(".menu");
+  menuWindow.classList.toggle("show-menu");
 }
 
 btnMenu.addEventListener("click", showHideMenu);
