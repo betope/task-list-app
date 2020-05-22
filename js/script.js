@@ -79,7 +79,7 @@ window.addEventListener("keypress", detectEnterPress);
 // Dark Mode
 function darkMode() {
   var darkModeOn = document.body;
-  element.classList.toggle("dark-mode");
+  darkModeOn.classList.toggle("dark-mode");
 }
 
 function showHideMenu() {
