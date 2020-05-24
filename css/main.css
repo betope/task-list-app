@@ -146,6 +146,6 @@ body {position: relative;}
 
 /* Dark Mode */
 .dark-mode {
-  background: #111;
+  background: #000;
   color: #fff;
 }
