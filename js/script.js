@@ -84,8 +84,10 @@ function showHideMenu() {
 }
 
 btnMenu.addEventListener("click", showHideMenu);
+
+
 // Dark Mode
 function darkMode() {
   var darkModeOn = document.body;
-  element.classList.toggle("dark-mode");
+  darkModeOn.classList.toggle("dark-mode");
 }
