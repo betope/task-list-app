@@ -149,3 +149,36 @@ body {position: relative;}
   background: #000;
   color: #fff;
 }
+
+/* About page */
+.about {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  display: none;
+  height: 100vh;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.about-wrapper {
+  align-items:  center;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  opacity: ;
+  padding: 20px;
+  width: 700px;
+}
+.about a {
+  color: #000;
+  text-decoration: none;
+}
+.btn-close {
+  font-size: 1.9rem;
+  cursor: pointer;
+}
