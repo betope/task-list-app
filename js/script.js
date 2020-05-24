@@ -71,9 +71,7 @@ function createTask() {
 function detectPressEnter(e) {
   if(textfield.value.length > 0 && e.keyCode === 13) {
     createTask();
-  } else {
-    alert("Por favor, digite algum texto antes de criar uma tarefa!");
-  }
+  } 
 }
 // Listen to create a task when the enter key is pressed
 textfield.addEventListener("keypress", detectPressEnter);
