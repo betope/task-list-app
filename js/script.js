@@ -91,3 +91,20 @@ function darkMode() {
   var darkModeOn = document.body;
   darkModeOn.classList.toggle("dark-mode");
 }
+
+// About page
+var aboutPage = document.querySelector(".about");
+var btnOpenAbout = document.querySelector(".btn-about")
+var btnCloseAbout = document.querySelector(".btn-close");
+
+// Show about page
+function openAboutPage() {
+  aboutPage.style.display = "flex";
+}
+// Close about page
+function closeAboutPage() {
+  aboutPage.style.display = "none";
+}
+// Detect when there's a click on one of the buttons to call the functions to open and close
+btnOpenAbout.addEventListener("click", openAboutPage);
+btnCloseAbout.addEventListener("click", closeAboutPage);

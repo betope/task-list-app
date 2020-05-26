@@ -49,6 +49,7 @@ body {position: relative;}
   padding: 10px;
   visibility: hidden;
 }
+.menu-item {cursor: pointer;}
 .menu-item:not(:last-child) {margin-bottom: 10px;}
 
 .menu-item a {
@@ -153,9 +154,9 @@ body {position: relative;}
 /* About page */
 .about {
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
   bottom: 0;
-  display: flex;
+  display: none;
   height: 100vh;
   justify-content: center;
   position: absolute;
@@ -170,7 +171,6 @@ body {position: relative;}
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
-  opacity: ;
   padding: 20px;
   width: 700px;
 }
