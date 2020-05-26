@@ -155,7 +155,7 @@ body {position: relative;}
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
   bottom: 0;
-  display: none;
+  display: flex;
   height: 100vh;
   justify-content: center;
   position: absolute;
@@ -176,9 +176,17 @@ body {position: relative;}
 }
 .about a {
   color: #000;
+  font-size: 14px;
   text-decoration: none;
 }
+
+.about p {font-size: 14px;}
+.about-logo {margin-bottom: 15px;}
+
+.about-title {font-size: 18px; margin: 15px 0 3px;}
+
 .btn-close {
-  font-size: 1.9rem;
   cursor: pointer;
+  font-size: 1.3rem;
+  margin-top: 40px;
 }
