@@ -154,7 +154,7 @@ body {position: relative;}
 /* About page */
 .about {
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
   bottom: 0;
   display: none;
   height: 100vh;
