@@ -94,7 +94,7 @@ body {
 }
 .btn-create:hover {
 	background: ;
-	color: ;
+	color: var(main-black);
 }
 
 #tasks-to-do,
