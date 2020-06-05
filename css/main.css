@@ -54,10 +54,11 @@ body {
   visibility: hidden;
 }
 .menu-item {cursor: pointer;}
+
 .menu-item:not(:last-child) {margin-bottom: 10px;}
 
 .menu-item a {
-  color: ;
+  color: var(--main-black);
   text-decoration: none;
 }
 
@@ -76,7 +77,7 @@ body {
 .user-input,
 .btn-create {
   background: none;
-	border: 1px solid ;
+	border: 1px solid #b3b3b3;
 	border-radius: 5px;
 	height: 35px;
 }
@@ -93,8 +94,8 @@ body {
 	transition: ease .4s;
 }
 .btn-create:hover {
-	background: ;
-	color: var(main-black);
+	background: var(--main-black);
+	color: #fff;
 }
 
 #tasks-to-do,
@@ -105,9 +106,9 @@ body {
 	max-width: 600px;
 }
 .list-item {
-	border: 1px solid #545453;
+	border: 1px solid var(--main-black);
 	border-radius: 5px;
-	color: #545453;
+	color: var(--main-black);
 	margin-bottom: 10px;
 	padding: 8px;
 	position: relative;
@@ -125,15 +126,15 @@ body {
 
 .btn-check,
 .btn-delete {
-	color: ;
+	color: var(--main-black);
 	cursor: pointer;
 	position: absolute;
 	right: 8px;
 }
 
-.btn-check:hover {color: ;}
+.btn-check:hover {color: #63EB8E;}
 
-.btn-delete:hover {color: ;}
+.btn-delete:hover {color: #FC4151;}
 
 .btn-check {margin-right: 30px;}
 .copy {text-align: center;}
