@@ -6,14 +6,14 @@
     padding: 0;
 }
 :root {
-  --bg-color:;
-  --border-color:;
+  --bg-color: #f2f2f2;
+  --border-color: #;
   --hover-color:;
   --main-black: #404040;
   --text-color:;
 }
 body {
-  background-color: var(--bg-body);
+  background-color: var(--bg-color);
   position: relative;
 }
 
@@ -32,7 +32,7 @@ body {
 }
 
 .btn-menu {
-  color: #404040;
+  color: var(--main-black);
   cursor: pointer;
   font-size: 1.9rem;
   margin-left: 20px;
@@ -177,6 +177,7 @@ body {
   padding: 20px;
   width: 700px;
 }
+.about h2 {font-size: 20px;}
 .about a {
   color: #000;
   font-size: 14px;
