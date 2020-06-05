@@ -5,13 +5,20 @@
     outline: none;
     padding: 0;
 }
-:root {
+html {
   --bg-color: #f2f2f2;
-  --border-color: #;
-  --hover-color:;
+  --border-color: #b3b3b3;
   --main-black: #404040;
-  --text-color:;
+  --text-color: #5e5e5e;
 }
+
+html[data-theme='dark'] {
+  --bg-color: #333;
+  --border-color: #fff;
+  --main-black: #fff;
+  --text-color: #fff;
+}
+
 body {
   background-color: var(--bg-color);
   position: relative;
@@ -77,10 +84,12 @@ body {
 .user-input,
 .btn-create {
   background: none;
-	border: 1px solid #b3b3b3;
+	border: 1px solid var(--border-color);
 	border-radius: 5px;
+  color: var(--text-color);
 	height: 35px;
 }
+::placeholder {color: var(--text-color);}
 
 .user-input {
 	flex-grow: 10;
@@ -108,7 +117,7 @@ body {
 .list-item {
 	border: 1px solid var(--main-black);
 	border-radius: 5px;
-	color: var(--main-black);
+	color: var(--text-color);
 	margin-bottom: 10px;
 	padding: 8px;
 	position: relative;
@@ -152,7 +161,7 @@ body {
 
 /* Dark Mode */
 .dark-mode {
-  background: #000;
+  background: #111;
 }
 
 /* About page */

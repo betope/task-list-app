@@ -87,6 +87,10 @@ btnMenu.addEventListener("click", showHideMenu);
 
 
 // Dark Mode
+var page = document.getElementByTagName()
+var checkbox = document.querySelector("input[name=switch-theme]");
+
+
 function darkMode() {
   var darkModeOn = document.body;
   darkModeOn.classList.toggle("dark-mode");
