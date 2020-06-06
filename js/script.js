@@ -87,14 +87,12 @@ btnMenu.addEventListener("click", showHideMenu);
 
 
 // Dark Mode
-var page = document.getElementByTagName()
+// var page = document.getElementByTagName()
 var checkbox = document.querySelector("input[name=switch-theme]");
+checkbox.addEventListener("click", function() {
+  checkbox.dataset.theme = "dark";
+});
 
-
-function darkMode() {
-  var darkModeOn = document.body;
-  darkModeOn.classList.toggle("dark-mode");
-}
 
 // About page
 var aboutPage = document.querySelector(".about");

@@ -7,14 +7,14 @@
 }
 html {
   --bg-color: #f2f2f2;
-  --border-color: #b3b3b3;
+  --light-gray: #b3b3b3;
   --main-black: #404040;
   --text-color: #5e5e5e;
 }
 
 html[data-theme='dark'] {
   --bg-color: #333;
-  --border-color: #fff;
+  --light-gray: #fff;
   --main-black: #fff;
   --text-color: #fff;
 }
@@ -84,7 +84,7 @@ body {
 .user-input,
 .btn-create {
   background: none;
-	border: 1px solid var(--border-color);
+	border: 1px solid var(--light-gray);
 	border-radius: 5px;
   color: var(--text-color);
 	height: 35px;
