@@ -88,6 +88,7 @@ btnMenu.addEventListener("click", showHideMenu);
 
 // Dark Mode
 var page = document.querySelector("html")
+var logos = document.querySelectorAll("img");
 var checkbox = document.querySelector("input[name=switch-theme]");
 checkbox.addEventListener("click", function() {
   if(this.checked) {
@@ -95,6 +96,7 @@ checkbox.addEventListener("click", function() {
   } else {
     page.setAttribute("data-theme", "light");
   }
+  console.log(logos);
 });
 
 
