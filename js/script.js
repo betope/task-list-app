@@ -96,7 +96,7 @@ checkbox.addEventListener("click", function() {
   } else {
     page.setAttribute("data-theme", "light");
   }
-  console.log(logos);
+  
 });
 
 
