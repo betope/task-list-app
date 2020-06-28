@@ -5,6 +5,8 @@
  var btnCreate = document.querySelector(".btn-create");
  var btnMenu = document.querySelector(".btn-menu");
  let headerLogo = document.getElementById("headerLogo");
+ let menuWindow = document.querySelector(".menu");
+ var body = document.querySelector(body);
 
 // Function that create the task elements
 function createTask() {
@@ -55,12 +57,12 @@ function createTask() {
 
   //Function to to mark the task as done
   function doneTask() {
-  paragraph.classList.toggle("task-done");
+    paragraph.classList.toggle("task-done");
   }
 
   // Function to delete a task
   function deleteTask() {
-  paragraph.classList.add("task-deleted");
+    paragraph.classList.add("task-deleted");
   }
 
   // Listen the check and delete button
@@ -77,15 +79,11 @@ function detectPressEnter(e) {
 // Listen to create a task when the enter key is pressed
 textfield.addEventListener("keypress", detectPressEnter);
 
-
-
 function showHideMenu() {
-  var menuWindow = document.querySelector(".menu");
   menuWindow.classList.toggle("show-menu");
 }
 
 btnMenu.addEventListener("click", showHideMenu);
-
 
 // Dark Mode
 var page = document.querySelector("html")

@@ -10,7 +10,6 @@ html {
   --light-gray: #b3b3b3;
   --main-black: #404040;
   --text-color: #5e5e5e;
-  transition: .2s ease;
 }
 
 html[data-theme='dark'] {
