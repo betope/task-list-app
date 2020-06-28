@@ -4,6 +4,7 @@
  var taskToDo = document.getElementById("tasks-to-do");
  var btnCreate = document.querySelector(".btn-create");
  var btnMenu = document.querySelector(".btn-menu");
+ let headerLogo = document.getElementById("headerLogo");
 
 // Function that create the task elements
 function createTask() {
@@ -92,8 +93,10 @@ var checkbox = document.querySelector("input[name=switch-theme]");
 checkbox.addEventListener("click", function() {
   if(this.checked) {
     page.setAttribute("data-theme", "dark");
+    headerLogo.src = "img/logo-white.png";
   } else {
     page.setAttribute("data-theme", "light");
+    headerLogo.src = "img/logo.png";
   }
 });
 
