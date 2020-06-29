@@ -6,7 +6,6 @@
  var btnMenu = document.querySelector(".btn-menu");
  let headerLogo = document.getElementById("headerLogo");
  let menuWindow = document.querySelector(".menu");
- var body = document.querySelector(body);
 
 // Function that create the task elements
 function createTask() {
@@ -97,7 +96,6 @@ checkbox.addEventListener("click", function() {
     headerLogo.src = "img/logo.png";
   }
 });
-
 
 // About page
 var aboutPage = document.querySelector(".about");
