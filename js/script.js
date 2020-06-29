@@ -5,6 +5,7 @@
  var btnCreate = document.querySelector(".btn-create");
  var btnMenu = document.querySelector(".btn-menu");
  let headerLogo = document.getElementById("headerLogo");
+ let aboutLogo = document.getElementById("aboutLogo");
  let menuWindow = document.querySelector(".menu");
 
 // Function that create the task elements
@@ -97,6 +98,7 @@ const enableDarkMode = () => {
   page.setAttribute("data-theme", "dark");
   // Change the logo to the white version
   headerLogo.src = "img/logo-white.png";
+  aboutLogo.src = "img/about-logo-white.png";
   //Change the localStorage saved item
   localStorage.setItem("darkMode", "enabled");
 }
@@ -106,6 +108,7 @@ const disableDarkMode = () => {
   page.setAttribute("data-theme", "light");
   // Change the logo to the white version
   headerLogo.src = "img/logo.png";
+  aboutLogo.src = "img/about-logo.png";
   //Change the localStorage saved item
   localStorage.setItem("darkMode", null);
 }
