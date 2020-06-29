@@ -91,6 +91,7 @@ btnMenu.addEventListener("click", showHideMenu);
 let darkMode = localStorage.getItem("darkMode");
 var darkModeToggle = document.querySelector("#checkbox-dark");
 var page = document.querySelector("html")
+var checkboxDark = document.getElementById("checkbox-dark");
 
 //Creates a function
 const enableDarkMode = () => {
@@ -99,6 +100,8 @@ const enableDarkMode = () => {
   // Change the logo to the white version
   headerLogo.src = "img/logo-white.png";
   aboutLogo.src = "img/about-logo-white.png";
+  // Make the checkbox checked
+  checkboxDark.checked = true;
   //Change the localStorage saved item
   localStorage.setItem("darkMode", "enabled");
 }
@@ -109,6 +112,8 @@ const disableDarkMode = () => {
   // Change the logo to the white version
   headerLogo.src = "img/logo.png";
   aboutLogo.src = "img/about-logo.png";
+  // Make the checkbox unchecked
+  checkboxDark.checked = false;
   //Change the localStorage saved item
   localStorage.setItem("darkMode", null);
 }
