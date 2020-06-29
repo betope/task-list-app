@@ -85,17 +85,49 @@ function showHideMenu() {
 btnMenu.addEventListener("click", showHideMenu);
 
 // Dark Mode
+// This code was copied and adpted from this pen
+// https://codepen.io/kevinpowell/pen/EMdjOV?editors=0010
+let darkMode = localStorage.getItem("darkMode");
+var darkModeToggle = document.querySelector("#checkbox-dark");
 var page = document.querySelector("html")
-var checkbox = document.querySelector("input[name=switch-theme]");
-checkbox.addEventListener("click", function() {
-  if(this.checked) {
-    page.setAttribute("data-theme", "dark");
-    headerLogo.src = "img/logo-white.png";
-  } else {
-    page.setAttribute("data-theme", "light");
-    headerLogo.src = "img/logo.png";
-  }
-});
+
+//Creates a function
+const enableDarkMode = () => {
+  // Set the data attribute to dark
+  page.setAttribute("data-theme", "dark");
+  // Change the logo to the white version
+  headerLogo.src = "img/logo-white.png";
+  //Change the localStorage saved item
+  localStorage.setItem("darkMode", "enabled");
+}
+//Creates a function
+const disableDarkMode = () => {
+  // Set the data attribute to dark
+  page.setAttribute("data-theme", "light");
+  // Change the logo to the white version
+  headerLogo.src = "img/logo.png";
+  //Change the localStorage saved item
+  localStorage.setItem("darkMode", null);
+}
+
+// Verify if the dark mode is active or not when the user open the application
+if(darkMode === "enabled") {
+  enableDarkMode();
+} else {
+  disableDarkMode();
+}
+
+// Listener to the checkbox
+darkModeToggle.addEventListener("click", () => {
+  darkMode = localStorage.getItem("darkMode");
+    // If it not current enabled, enable it
+    if(darkMode !== "enabled") {
+      enableDarkMode();
+    // If it not current enabled, turn it off
+    } else {
+      disableDarkMode();
+    }
+})
 
 // About page
 var aboutPage = document.querySelector(".about");
