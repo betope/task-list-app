@@ -1,12 +1,12 @@
 //Get the elements
- var textfield = document.getElementById("textfield");
- var enterButton = document.getElementById("enter-btn");
- var taskToDo = document.getElementById("tasks-to-do");
- var btnCreate = document.querySelector(".btn-create");
- var btnMenu = document.querySelector(".btn-menu");
- let headerLogo = document.getElementById("headerLogo");
- let aboutLogo = document.getElementById("aboutLogo");
- let menuWindow = document.querySelector(".menu");
+var textfield = document.getElementById("textfield");
+var enterButton = document.getElementById("enter-btn");
+var taskToDo = document.getElementById("tasks-to-do");
+var btnCreate = document.querySelector(".btn-create");
+var btnMenu = document.querySelector(".btn-menu");
+let headerLogo = document.getElementById("headerLogo");
+let aboutLogo = document.getElementById("aboutLogo");
+let menuWindow = document.querySelector(".menu");
 
 // Function that create the task elements
 function createTask() {
@@ -52,7 +52,6 @@ function createTask() {
   textfield.value = "";
   	//Make the focus go back to the input after submit the info
   textfield.focus();
-
   }
 
   //Function to to mark the task as done
