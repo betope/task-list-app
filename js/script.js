@@ -1,10 +1,12 @@
 //Get the elements
- var textfield = document.getElementById("textfield");
- var enterButton = document.getElementById("enter-btn");
- var taskToDo = document.getElementById("tasks-to-do");
- var btnCreate = document.querySelector(".btn-create");
- var btnMenu = document.querySelector(".btn-menu");
- let headerLogo = document.getElementById("headerLogo");
+var textfield = document.getElementById("textfield");
+var enterButton = document.getElementById("enter-btn");
+var taskToDo = document.getElementById("tasks-to-do");
+var btnCreate = document.querySelector(".btn-create");
+var btnMenu = document.querySelector(".btn-menu");
+let headerLogo = document.getElementById("headerLogo");
+let aboutLogo = document.getElementById("aboutLogo");
+let menuWindow = document.querySelector(".menu");
 
 // Function that create the task elements
 function createTask() {
@@ -50,23 +52,22 @@ function createTask() {
   textfield.value = "";
   	//Make the focus go back to the input after submit the info
   textfield.focus();
-
   }
-
   //Function to to mark the task as done
   function doneTask() {
-  paragraph.classList.toggle("task-done");
+    paragraph.classList.toggle("task-done");
   }
 
   // Function to delete a task
   function deleteTask() {
-  paragraph.classList.add("task-deleted");
+    paragraph.classList.add("task-deleted");
   }
-
   // Listen the check and delete button
   btnCheck.addEventListener("click", doneTask);
   btnDelete.addEventListener("click", deleteTask);
 }
+
+
 
 // Function to detect when the enter key is pressed
 function detectPressEnter(e) {
@@ -77,29 +78,63 @@ function detectPressEnter(e) {
 // Listen to create a task when the enter key is pressed
 textfield.addEventListener("keypress", detectPressEnter);
 
-
-
 function showHideMenu() {
-  var menuWindow = document.querySelector(".menu");
   menuWindow.classList.toggle("show-menu");
 }
 
 btnMenu.addEventListener("click", showHideMenu);
 
-
 // Dark Mode
+// This code was copied and adpted from this pen
+// https://codepen.io/kevinpowell/pen/EMdjOV?editors=0010
+let darkMode = localStorage.getItem("darkMode");
+var darkModeToggle = document.querySelector("#checkbox-dark");
 var page = document.querySelector("html")
-var checkbox = document.querySelector("input[name=switch-theme]");
-checkbox.addEventListener("click", function() {
-  if(this.checked) {
-    page.setAttribute("data-theme", "dark");
-    headerLogo.src = "img/logo-white.png";
-  } else {
-    page.setAttribute("data-theme", "light");
-    headerLogo.src = "img/logo.png";
-  }
-});
+var checkboxDark = document.getElementById("checkbox-dark");
 
+//Creates a function
+const enableDarkMode = () => {
+  // Set the data attribute to dark
+  page.setAttribute("data-theme", "dark");
+  // Change the logo to the white version
+  headerLogo.src = "img/logo-white.png";
+  aboutLogo.src = "img/about-logo-white.png";
+  // Make the checkbox checked
+  checkboxDark.checked = true;
+  //Change the localStorage saved item
+  localStorage.setItem("darkMode", "enabled");
+}
+//Creates a function
+const disableDarkMode = () => {
+  // Set the data attribute to dark
+  page.setAttribute("data-theme", "light");
+  // Change the logo to the white version
+  headerLogo.src = "img/logo.png";
+  aboutLogo.src = "img/about-logo.png";
+  // Make the checkbox unchecked
+  checkboxDark.checked = false;
+  //Change the localStorage saved item
+  localStorage.setItem("darkMode", null);
+}
+
+// Verify if the dark mode is active or not when the user open the application
+if(darkMode === "enabled") {
+  enableDarkMode();
+} else {
+  disableDarkMode();
+}
+
+// Listener to the checkbox
+darkModeToggle.addEventListener("click", () => {
+  darkMode = localStorage.getItem("darkMode");
+    // If it not current enabled, enable it
+    if(darkMode !== "enabled") {
+      enableDarkMode();
+    // If it not current enabled, turn it off
+    } else {
+      disableDarkMode();
+    }
+})
 
 // About page
 var aboutPage = document.querySelector(".about");

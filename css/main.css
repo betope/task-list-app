@@ -6,11 +6,10 @@
     padding: 0;
 }
 html {
-  --bg-color: #f2f2f2;
+  --bg-color: #fff;
   --light-gray: #b3b3b3;
   --main-black: #404040;
-  --text-color: #5e5e5e;
-  transition: .2s ease;
+  --btn-create: #111;
 }
 
 html[data-theme='dark'] {
@@ -18,6 +17,7 @@ html[data-theme='dark'] {
   --light-gray: #fff;
   --main-black: #fff;
   --text-color: #fff;
+  --btn-create: #fff;
 }
 
 body {
@@ -52,7 +52,6 @@ body {
 }
 
 .menu {
-  background: ;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 1px 1px 8px rgba(0, 0, 0, .2);
@@ -83,7 +82,7 @@ body {
   background: none;
 	border: 1px solid var(--light-gray);
 	border-radius: 5px;
-  color: var(--text-color);
+  color: var(--btn-create);
 	height: 35px;
 }
 ::placeholder {color: var(--text-color);}
@@ -93,6 +92,7 @@ body {
 	padding-left: 8px;
 }
 .btn-create {
+  /* background: var(--main-black); */
 	cursor: pointer;
 	flex-grow: 1;
 	font-weight: bold;
@@ -101,7 +101,7 @@ body {
 }
 .btn-create:hover {
 	background: var(--main-black);
-	color: #fff;
+	color: var(--bg-color);
 }
 
 #tasks-to-do,
