@@ -60,7 +60,7 @@ function createTask() {
 
   // Function to delete a task
   function deleteTask() {
-    paragraph.classList.add("task-deleted");
+    paragraph.remove("task");
   }
   // Listen the check and delete button
   btnCheck.addEventListener("click", doneTask);
