@@ -128,7 +128,6 @@ body {
 	opacity: .5;
 	text-decoration: line-through;
 }
-.task-deleted {display: none;}
 
 .btn-check,
 .btn-delete {
