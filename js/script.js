@@ -53,7 +53,6 @@ function createTask() {
   	//Make the focus go back to the input after submit the info
   textfield.focus();
   }
-
   //Function to to mark the task as done
   function doneTask() {
     paragraph.classList.toggle("task-done");
@@ -63,11 +62,12 @@ function createTask() {
   function deleteTask() {
     paragraph.classList.add("task-deleted");
   }
-
   // Listen the check and delete button
   btnCheck.addEventListener("click", doneTask);
   btnDelete.addEventListener("click", deleteTask);
 }
+
+
 
 // Function to detect when the enter key is pressed
 function detectPressEnter(e) {
