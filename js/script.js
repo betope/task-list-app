@@ -8,6 +8,7 @@ let headerLogo = document.getElementById("headerLogo");
 let aboutLogo = document.getElementById("aboutLogo");
 let menuWindow = document.querySelector(".menu");
 
+
 // Function that create the task elements
 function createTask() {
   //Verify if the input isn't empty to create a task
@@ -18,6 +19,12 @@ function createTask() {
   var paragraph = document.createElement("p");
   //Get the value from the textfiled and put inside the paragraph
   paragraph.appendChild(document.createTextNode(textfield.value));
+
+  var allTasks = [];
+  allTasks.push(textfield.value);
+  console.log(allTasks);
+
+  localStorage.setItem("allTasks", allTasks);
 
   	//Create a span to hold the check icon
   var btnCheck = document.createElement("span");
@@ -66,8 +73,6 @@ function createTask() {
   btnCheck.addEventListener("click", doneTask);
   btnDelete.addEventListener("click", deleteTask);
 }
-
-
 
 // Function to detect when the enter key is pressed
 function detectPressEnter(e) {
