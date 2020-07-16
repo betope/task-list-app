@@ -1,5 +1,5 @@
 //Get the elements
-var textfield = document.getElementById("textfield");
+var textfield = document.getElementById("textfield").value;
 var enterButton = document.getElementById("enter-btn");
 var taskToDo = document.getElementById("tasks-to-do");
 var btnCreate = document.querySelector(".btn-create");
@@ -21,10 +21,10 @@ function createTask() {
   paragraph.appendChild(document.createTextNode(textfield.value));
 
   var allTasks = [];
-  allTasks.push(textfield.value);
+  allTasks.push(textfield);
   console.log(allTasks);
 
-  localStorage.setItem("allTasks", allTasks);
+  localStorage.setItem("allTasks", JSON.stringify(allTasks));
 
   	//Create a span to hold the check icon
   var btnCheck = document.createElement("span");
