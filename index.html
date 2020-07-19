@@ -4,7 +4,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="icons/plus.svg">
     <title>Minhas Tarefas</title>
+    <meta name="description" content="Aplicativo para acompanhar suas tarefa diárias">
   </head>
   <body>
     <header class="header">
@@ -12,10 +14,23 @@
         <a class="app-title" href="index.html">minhas tarefas</a>
         <span class="btn-menu"><img src="icons/menu.svg" alt="Ícone de menu"></span>
       </div>
-      <div class="btn-add-task">
-        <img src="icons/plus.svg" alt="Sinal de mais">
-      </div>
     </header>
+      <ul class="task-holder">
+        <li class="task"><input class="task-checker" type="checkbox">Fazer o layout do app</li>
+        <li class="task"><input class="task-checker" type="checkbox">Elaborar o wireframe do site do meu cliente </li>
+      </ul>
+    <div class="btn-add-task">
+      <img src="icons/plus.svg" alt="Sinal de mais">
+    </div>
+    <div class="creator-wrapper">
+      <div class="add-window">
+        <input class="user-input" type="text" placeholder="Nova tarefa">
+        <div class="btn-wrapper">
+          <button class="btn-cancel" type="button">cancelar</button>
+          <button class="btn-save" type="button">salvar</button>
+        </div>
+      </div>
+    </div>
     <script src="http://localhost:35729/livereload.js"></script>
   </body>
 </html>

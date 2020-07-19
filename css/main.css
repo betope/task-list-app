@@ -2,11 +2,13 @@
   box-sizing: border-box;
   font-family: 'Raleway', sans-serif;
   margin: 0;
+  outline: none;
   padding: 0;
 }
 /* CSS variables */
 :html {
   --mainBlack: #111;
+  --lightGray: #ccc;
 }
 body {
   background: url("../icons/clipboard.svg") no-repeat fixed center;
@@ -34,6 +36,22 @@ body {
   height: 25px;
   width: 28px;
 }
+
+.task-holder {
+  font-size: .875rem;
+  list-style-type: none;
+  padding: 0 1.25rem;
+}
+
+.task-checker {
+  margin-right: .575rem;
+}
+
+.task {
+  display: flex;
+  margin-bottom: 1.25rem;
+}
+
 .btn-add-task {
   align-items: center;
   bottom: 1.25rem;
@@ -47,4 +65,47 @@ body {
   position: absolute;
   right: 1.25rem;
   width: 45px;
+}
+
+.creator-wrapper {
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  width: 100%;
+}
+
+.add-window {
+  background: #fff;
+  border-radius: 5px 5px 0 0;
+  bottom: 0;
+  padding: 1.25rem;
+  position: absolute;
+  width: 100%;
+}
+
+.user-input {
+  background: none;
+  border: none;
+  margin-bottom: 1.25rem;
+  width: 100%;
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-cancel {margin-right: 1.25rem;}
+
+.btn-save,
+.btn-cancel {
+  background: none;
+  border: none;
+  color: var(--lightGray);
+  cursor: pointer;
+  font-weight: 600;
+  opacity: .4;
+  text-transform: capitalize;
 }
