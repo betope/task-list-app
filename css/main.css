@@ -69,10 +69,10 @@ body {
 
 .creator-wrapper {
   background: rgba(0, 0, 0, 0.5);
+  display: none;
   height: 100%;
   position: absolute;
   top: 0;
-  visibility: hidden;
   width: 100%;
 }
 
