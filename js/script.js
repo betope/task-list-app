@@ -9,25 +9,41 @@ var userInput = document.querySelector(".user-input");
 
 var tasks = [];
 
-function verifier() {
+function verifyIfEmpty() {
   if(userInput.value.length == 0) {
     alert("Você precisa escrever algo para criar a tarefa!");
   } else {
-    alert("Tarefa criada");
+    createElements();
   }
 }
-function createElements() {
-  for(task of tasks) {
-    var taskChecker = document.createElement("input");
-    var task = document.createElement("li");
-    var taskText = document.createTextNode(task);
 
-    taskChecker.setAttribute("type", "checkbox");
-    task.appendChild(taskChecker);
-    task.appendChild(taskText);
-  }
+function createElements() {
+  var taskChecker = document.createElement("input");
+  var task = document.createElement("li");
+  var taskText = document.createTextNode(userInput.value);
+
+  taskChecker.classList.add("task-checker");
+  task.classList.add("task");
+
+  taskChecker.setAttribute("type", "checkbox");
+  task.appendChild(taskChecker);
+  task.appendChild(taskText);
+  userInput.value = "";
+  userInput.focus();
+  taskHolder.appendChild(task);
+  tasks.push(taskText);
+}
+
+function cancel() {
+  btnCancel.onclick = userInput.value = "";
 }
 
 btnSave.onclick = () => {
-  verifier();
+  verifyIfEmpty();
+}
+userInput.onkeypress = () => {
+  if (userInput.value > 0 && e.keyCode === 13) {
+    createElements();
+  }
+
 }
