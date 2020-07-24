@@ -1,5 +1,5 @@
 //Get the elements
-var textfield = document.getElementById("textfield");
+var textfield = document.getElementById("textfield").value;
 var enterButton = document.getElementById("enter-btn");
 var taskToDo = document.getElementById("tasks-to-do");
 var btnCreate = document.querySelector(".btn-create");
@@ -7,6 +7,7 @@ var btnMenu = document.querySelector(".btn-menu");
 let headerLogo = document.getElementById("headerLogo");
 let aboutLogo = document.getElementById("aboutLogo");
 let menuWindow = document.querySelector(".menu");
+
 
 // Function that create the task elements
 function createTask() {
@@ -18,6 +19,12 @@ function createTask() {
   var paragraph = document.createElement("p");
   //Get the value from the textfiled and put inside the paragraph
   paragraph.appendChild(document.createTextNode(textfield.value));
+
+  var allTasks = [];
+  allTasks.push(textfield);
+  console.log(allTasks);
+
+  localStorage.setItem("allTasks", JSON.stringify(allTasks));
 
   	//Create a span to hold the check icon
   var btnCheck = document.createElement("span");
@@ -66,8 +73,6 @@ function createTask() {
   btnCheck.addEventListener("click", doneTask);
   btnDelete.addEventListener("click", deleteTask);
 }
-
-
 
 // Function to detect when the enter key is pressed
 function detectPressEnter(e) {
