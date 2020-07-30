@@ -14,6 +14,8 @@ function verifyIfEmpty() {
     alert("Você precisa escrever algo para criar a tarefa!");
   } else {
     createElements();
+    addText();
+    saveOnStorage();
   }
 }
 
@@ -31,7 +33,7 @@ function addText() {
   var taskText = document.createTextNode(userInput.value);
   task.appendChild(taskText);
   taskHolder.appendChild(task);
-  tasks.push(task);
+  tasks.push(taskText);
   userInput.value = "";
   userInput.focus();
 }
@@ -42,13 +44,9 @@ function saveOnStorage() {
 
 btnSave.onclick = () => {
   verifyIfEmpty();
-  createElements();
-  addText();
-  saveOnStorage();
 }
-userInput.onkeypress = (e) => {
+userInput.onkeydown = (e) => {
   if (userInput.value.length > 0 && e.keyCode === 13) {
-    verifyIfEmpty();
     createElements();
     addText();
     saveOnStorage();
