@@ -16,6 +16,7 @@ body {
 }
 .header {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, .1);
+  margin-bottom: 1.875rem;
   padding: 1.25rem;
   width: 100%;
 }
@@ -107,6 +108,5 @@ body {
   color: var(--lightGray);
   cursor: pointer;
   font-weight: 600;
-  opacity: .4;
   text-transform: capitalize;
 }
