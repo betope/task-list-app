@@ -108,6 +108,5 @@ body {
   color: var(--lightGray);
   cursor: pointer;
   font-weight: 600;
-  opacity: .4;
   text-transform: capitalize;
 }
