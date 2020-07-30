@@ -11,7 +11,8 @@ var tasks = [];
 
 function verifyIfEmpty() {
   if(userInput.value.length == 0) {
-    alert("Você precisa escrever algo para criar a tarefa!");
+    alert("Type something");
+    return false;
   } else {
     createElements();
   }
