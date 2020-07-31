@@ -61,6 +61,7 @@ body {
 }
 
 .task {
+  align-items: center;
   display: flex;
   margin-bottom: 1.25rem;
   position: relative;
