@@ -34,13 +34,13 @@ function addText() {
   var taskText = document.createTextNode(userInput.value);
   task.appendChild(taskText);
   taskHolder.appendChild(task);
-  tasks.push(taskText);
+  tasks.push(userInput.value);
   userInput.value = "";
   userInput.focus();
 }
 
 function saveOnStorage() {
-  localStorage.setItem("allTasks", JSON.stringify(tasks));
+  localStorage.setItem('allTasks', JSON.stringify(tasks));
 }
 
 btnSave.onclick = () => {
