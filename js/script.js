@@ -7,6 +7,7 @@ var creatorWrapper = document.querySelector(".creator-wrapper");
 var userInput = document.querySelector(".user-input");
 var task;
 var taskChecker;
+var checkmark;
 var tasks = [];
 
 function verifyIfEmpty() {
@@ -22,11 +23,14 @@ function verifyIfEmpty() {
 
 function createElements() {
   taskChecker = document.createElement("input");
-  task = document.createElement("li");
+  task = document.createElement("label");
+  checkmark = document.createElement("span");
   taskChecker.classList.add("task-checker");
   task.classList.add("task");
+  checkmark.classList.add("checkmark");
   taskChecker.setAttribute("type", "checkbox");
   task.appendChild(taskChecker);
+  task.appendChild(checkmark);
 
 }
 
