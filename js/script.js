@@ -31,7 +31,6 @@ function createElements() {
   taskChecker.setAttribute("type", "checkbox");
   task.appendChild(taskChecker);
   task.appendChild(checkmark);
-
 }
 
 function addText() {
@@ -55,5 +54,10 @@ userInput.onkeydown = (e) => {
     createElements();
     addText();
     saveOnStorage();
+  }
+}
+function renderTasks() {
+  for() {
+
   }
 }
