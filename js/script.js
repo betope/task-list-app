@@ -1,4 +1,4 @@
-var btnAdd = document.querySelector(".btn-add-task");
+var btnAddTask = document.querySelector(".btn-add-task");
 var btnSave = document.querySelector(".btn-save");
 var btnCancel = document.querySelector(".btn-cancel");
 var btnMenu = document.querySelector(".btn-menu");
@@ -12,7 +12,7 @@ var tasks = [];
 
 function verifyIfEmpty() {
   if(userInput.value.length == 0) {
-    alert("Type something");
+    alert("Escreva algo para criar uam tarefa!");
     return false;
   } else {
     createElements();
@@ -55,4 +55,18 @@ userInput.onkeydown = (e) => {
     addText();
     saveOnStorage();
   }
+}
+function renderTasks() {
+  for(task of tasks) {
+    createElements();
+    addText();
+    JSON.parse(localStorage.getItem('allTasks', createElements, addText))
+  }
+}
+btnAddTask.onclick = () => {
+  creatorWrapper.style.display = "block";
+}
+
+btnCancel.onclick = () => {
+  creatorWrapper.style.display = "none";
 }
