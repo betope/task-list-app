@@ -56,8 +56,3 @@ userInput.onkeydown = (e) => {
     saveOnStorage();
   }
 }
-function renderTasks() {
-  for() {
-
-  }
-}
