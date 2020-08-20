@@ -46,6 +46,10 @@ function saveOnStorage() {
   localStorage.setItem('allTasks', JSON.stringify(tasks));
 }
 
+function retrieveStorage() {
+  
+}
+
 btnSave.onclick = () => {
   verifyIfEmpty();
 }
