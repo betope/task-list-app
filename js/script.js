@@ -70,3 +70,9 @@ btnAddTask.onclick = () => {
 btnCancel.onclick = () => {
   creatorWrapper.style.display = "none";
 }
+
+window.onclick = (e) => {
+  if (e.target == creatorWrapper) {
+    creatorWrapper.style.display = "none";
+  }
+}
