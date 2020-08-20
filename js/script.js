@@ -1,4 +1,4 @@
-var btnAddTask = document.querySelector(".btn-add-task");
+var btnOpenWindow = document.querySelector(".btn-open-window");
 var btnSave = document.querySelector(".btn-save");
 var btnCancel = document.querySelector(".btn-cancel");
 var btnMenu = document.querySelector(".btn-menu");
@@ -43,16 +43,10 @@ function addText() {
 }
 
 function saveOnStorage() {
-  localStorage.setItem('allTasks', JSON.stringify(tasks));
+  var str = JSON.stringify(tasks);
+  localStorage.setItem('allTasks', str);
 }
 
-function retrieveStorage() {
-  
-}
-
-btnSave.onclick = () => {
-  verifyIfEmpty();
-}
 userInput.onkeydown = (e) => {
   if (userInput.value.length > 0 && e.keyCode === 13) {
     createElements();
@@ -60,15 +54,14 @@ userInput.onkeydown = (e) => {
     saveOnStorage();
   }
 }
-function renderTasks() {
-  for(task of tasks) {
-    createElements();
-    addText();
-    JSON.parse(localStorage.getItem('allTasks', createElements, addText))
-  }
+
+btnSave.onclick = () => {
+  verifyIfEmpty();
 }
-btnAddTask.onclick = () => {
+
+btnOpenWindow.onclick = () => {
   creatorWrapper.style.display = "block";
+  userInput.focus();
 }
 
 btnCancel.onclick = () => {
