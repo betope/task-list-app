@@ -42,9 +42,16 @@ function addText() {
   userInput.focus();
 }
 
+
 function saveOnStorage() {
-  var str = JSON.stringify(tasks);
-  localStorage.setItem('allTasks', str);
+  localStorage.setItem('allTasks', JSON.stringify(tasks));
+}
+function retrieveTasks() {
+    var str = JSON.parse(localStorage.getItem('allTasks'));
+    tasks = str;
+    if(!tasks) {
+      tasks = [];
+    }
 }
 
 userInput.onkeydown = (e) => {
