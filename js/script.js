@@ -1,7 +1,6 @@
 var btnOpenWindow = document.querySelector(".btn-open-window");
 var btnSave = document.querySelector(".btn-save");
 var btnCancel = document.querySelector(".btn-cancel");
-var btnMenu = document.querySelector(".btn-menu");
 var taskHolder = document.querySelector(".task-holder");
 var creatorWrapper = document.querySelector(".creator-wrapper");
 var userInput = document.querySelector(".user-input");
@@ -12,7 +11,7 @@ var tasks = [];
 
 function verifyIfEmpty() {
   if(userInput.value.length == 0) {
-    alert("Escreva algo para criar uam tarefa!");
+    alert("Escreva algo para criar uma tarefa!");
     return false;
   } else {
     createElements();
@@ -79,4 +78,13 @@ window.onclick = (e) => {
   if (e.target == creatorWrapper) {
     creatorWrapper.style.display = "none";
   }
+}
+
+/* Menu buttons functions*/
+var btnShowMenu = document.querySelector(".btn-show-menu");
+var btnHideMenu = document.querySelector(".btn-hide-menu");
+var infoMenu = document.querySelector(".menu");
+
+btnShowMenu.onclick = () => {
+  infoMenu.style.display = "block";
 }
