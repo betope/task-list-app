@@ -7,11 +7,11 @@ var userInput = document.querySelector(".user-input");
 var task;
 var taskChecker;
 var checkmark;
-var tasks = [];
+var tasks =  JSON.parse(localStorage.getItem('allTasks', tasks)) || [];
 
 function verifyIfEmpty() {
   if(userInput.value.length == 0) {
-    alert("Escreva algo para criar uma tarefa!");
+    alert("Você precisa escrever algo para criar uma tarefa!");
     return false;
   } else {
     createElements();
@@ -45,13 +45,10 @@ function addText() {
 function saveOnStorage() {
   localStorage.setItem('allTasks', JSON.stringify(tasks));
 }
-function retrieveTasks() {
-    var str = JSON.parse(localStorage.getItem('allTasks'));
-    tasks = str;
-    if(!tasks) {
-      tasks = [];
-    }
-}
+
+// for (tasks of tasks) {
+//
+// }
 
 userInput.onkeydown = (e) => {
   if (userInput.value.length > 0 && e.keyCode === 13) {
